@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>Quantity</th>
+                <th>Reservation date</th>
+                <th>Return Date</th>
+            </tr>
+            <tr th:each="rentBook: ${rentBooks}">
+                <td th:text="${rentBooks.quantity}"></td>
+                <td th:text="${rentBooks.reservationDate}"></td>
+                <td th:text="${rentBooks.returnDate}"></td>
+            </tr>
+            <form method="POST" th:action="@{/logout}">
+                <input type="submit" name="Logout" value="Logout">
+            </form>
+        </table>
+    </body>
+</html>

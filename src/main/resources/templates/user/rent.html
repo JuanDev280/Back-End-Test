@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Rent</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Rent</h1>
+        <a th:href="@{/}">Return</a>
+        <br /><!-- comment -->
+        <h1>Book information</h1>
+        <form th:action="@{/saveReservation}" method="POST" th:object="${book}">
+            <input type="hidden" name="isbn" th:field="*{isbn}" readonly/>
+            <br />
+            <label for="name">Title:</label>
+            <input type="text" name="title" th:field="*{title}" readonly/>
+            <br />
+            <label for="name">Author:</label>
+            <input type="text" name="author" th:field="*{author}" readonly/>
+            <br />
+            <label for="name">Category:</label>
+            <input type="text" name="category" th:field="*{category}" readonly/>
+            <br />
+            <label for="name">Availability:</label>
+            <input type="number" name="availability" th:field="*{availability}" readonly/>
+            <br />
+            <label for="name">Price:</label>
+            <input type="number" name="price" th:field="*{price}" readonly/>
+            <br />
+            <input type="submit" name="save" value="Save"/>
+        </form>
+    </body>
+</html>

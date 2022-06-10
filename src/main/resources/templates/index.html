@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Inicio</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Inicio</h1>
+        <a th:href="@{/admin}">Admin</a>
+        <br />
+        <a th:href="@{/listBooksUser}">List</a>
+        <a th:href="@{/viewReservations}">Reservations</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- <a th:href="@{/add}">Create user</a> -->
+        <br />
+        <!--<table border="1">
+            <tr>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Availability</th>
+                <th>Price</th>
+                <th>Edit</th>
+                <th>Remove</th>
+            </tr>
+            <tr th:each="book: ${books}">
+                <td th:text="${book.isbn}"></td>
+                <td th:text="${book.title}"></td>
+                <td th:text="${book.author}"></td>
+                <td th:text="${book.category}"></td>
+                <td th:text="${book.availability}"></td>
+                <td th:text="${book.price}"></td>
+                <td><a th:href="@{/edit/} + ${book.isbn}" th:text="Edit"></a></td>
+                <td><a th:href="@{/remove/} + ${book.isbn}" th:text="Remove"></a></td>
+            </tr>
+            <form method="POST" th:action="@{/logout}">
+                <input type="submit" name="Logout" value="Logout">
+            </form>
+        </table>-->
+    </body>
+</html>

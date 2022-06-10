@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Personal Data</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Personal Data</h1>
+        <a th:href="@{/}">Return</a>
+        <br /><!-- comment -->
+        <form th:action="@{/save}" method="POST" th:object="${user}">
+            <input type="hidden" name="id_user" field="*{id_user}"/>
+            <label for="name">Name:</label>
+            <input type="text" name="name" field="*{name}"/>
+            <br />
+            <label for="name">Last Name:</label>
+            <input type="text" name="last_name" field="*{last_name}"/>
+            <br />
+            <label for="name">Email:</label>
+            <input type="email" name="email" field="*{email}"/>
+            <br />
+            <label for="name">Cell Phone:</label>
+            <input type="tel" name="cel" field="*{cel}"/>
+            <input type="hidden" name="rol" field="*{rol}" value="ROLE_USER"/>
+            <br />
+            <label for="name">User Name:</label>
+            <input type="text" name="username" field="*{username}"/>
+            <br />
+            <label for="name">Password:</label>
+            <input type="password" name="pwd" field="*{pwd}"/>
+            <br />
+            <input type="submit" name="save" value="Save"/>
+        </form>
+    </body>
+</html>
